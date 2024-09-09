@@ -21,7 +21,7 @@ export async function POST(req, res) {
           <p>Thank you for contacting us!</p>
           <p>New message submitted:</p>
           <p>{message}</p>
-          <p>Sender's Email:</p>
+          <p>Sender&apos;s Email:</p>
           <p>{email}</p>
         </>
       ),
