@@ -5,43 +5,47 @@ import TabButton from './TabButton';
 
 const TAB_DATA = [
     {
-      title: "Skills",
-      id: "skills",
+      title: "Languages",
+      id: "languages",
+      content: (
+        <ul className="list-disc pl-2">
+          <li>Java</li>
+          <li>Python</li>
+          <li>Javascript</li>
+          <li>Processing</li>
+        </ul>
+      ),
+    },
+    {
+      title: "Frameworks",
+      id: "frameworks",
       content: (
         <ul className="list-disc pl-2">
           <li>Node.js</li>
           <li>Express</li>
-          <li>PostgreSQL</li>
-          <li>Sequelize</li>
-          <li>JavaScript</li>
-          <li>React</li>
+          <li>Next.js</li>
+          <li>React.js</li>
+          <li>Bootstrap</li>
         </ul>
       ),
     },
     {
-      title: "Education",
-      id: "education",
+      title: "Services",
+      id: "services",
       content: (
         <ul className="list-disc pl-2">
-          <li>Fullstack Academy of Code</li>
-          <li>University of California, Santa Cruz</li>
-        </ul>
-      ),
-    },
-    {
-      title: "Certifications",
-      id: "certifications",
-      content: (
-        <ul className="list-disc pl-2">
-          <li>AWS Cloud Practitioner</li>
-          <li>Google Professional Cloud Developer</li>
+          <li>Postman</li>
+          <li>MYSQL</li>
+          <li>Atlassian Jira</li>
+          <li>Git, Github</li>
+          <li>Android Studio</li>
         </ul>
       ),
     },
   ];
 
 const AboutSection = () => {
-    const [tab, setTab] = useState("skills");
+    const [tab, setTab] = useState("languages");
     const [isPending, startTransition] = useTransition();
 
     const handleTabChange = (id) => {
@@ -79,25 +83,25 @@ const AboutSection = () => {
                 </p>
                 <div className="flex flex-row justify-start mt-8">
                     <TabButton
-                    selectTab={() => handleTabChange("skills")}
-                    active={tab === "skills"}
+                    selectTab={() => handleTabChange("languages")}
+                    active={tab === "languages"}
                     >
                     {" "}
-                    Skills{" "}
+                    Languages{" "}
                     </TabButton>
                     <TabButton
-                    selectTab={() => handleTabChange("education")}
-                    active={tab === "education"}
+                    selectTab={() => handleTabChange("frameworks")}
+                    active={tab === "frameworks"}
                     >
                     {" "}
-                    Education{" "}
+                    Frameworks{" "}
                     </TabButton>
                     <TabButton
-                    selectTab={() => handleTabChange("certifications")}
-                    active={tab === "certifications"}
+                    selectTab={() => handleTabChange("services")}
+                    active={tab === "services"}
                     >
                     {" "}
-                    Certifications{" "}
+                    Services{" "}
                     </TabButton>
                 </div>
                 <div className="mt-8">
